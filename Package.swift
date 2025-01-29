@@ -39,7 +39,10 @@ let package = Package(
         .target(
             name: "Cuckoo",
             dependencies: [],
-            path: "Source"
+            path: "Source",
+            swiftSettings: [
+                .unsafeFlags(["-enable-library-evolution"]),
+            ]
         ),
         .testTarget(
             name: "CuckooTests",
